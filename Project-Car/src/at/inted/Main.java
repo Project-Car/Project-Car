@@ -5,6 +5,7 @@ import at.inted.Connection.RemoteControl;
 import at.inted.Connection.UDP;
 import at.inted.commands.CommandHandler;
 import at.inted.commands.HelpCommand;
+import at.inted.commands.ReloadCommand;
 import at.inted.commands.StopCommand;
 import at.inted.utils.Console;
 import at.inted.utils.Log;
@@ -20,6 +21,7 @@ public class Main {
 		CommandHandler ch = new CommandHandler();
 		ch.Add(new HelpCommand());
 		ch.Add(new StopCommand());
+        ch.Add(new ReloadCommand());
 		ConsoleInput ci = new ConsoleInput();
 		ci.start();
 
