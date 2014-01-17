@@ -7,6 +7,7 @@ import at.inted.commands.CommandHandler;
 import at.inted.commands.HelpCommand;
 import at.inted.commands.ReloadCommand;
 import at.inted.commands.StopCommand;
+import at.inted.sensors.DistanceSensor;
 import at.inted.utils.Console;
 import at.inted.utils.Log;
 
@@ -29,6 +30,9 @@ public class Main {
 		UDP.receiveMessage();
 		RemoteControl rc = new RemoteControl();
 		rc.start();
+
+		DistanceSensor ds = new DistanceSensor();
+		ds.start();
 
 		Console.WriteInfo("Car started!");
 
